@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ЛР-3</title>
+        <style>
+        textarea {
+            display: block;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        label {
+            display: block;
+            margin: 10px;
+        }
+
+        fieldset,
+        button {
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>Лабораторна робота №3</h1>
+        <h2>Виконала студентка групи КН-32 Солодюк Катерина Олександрівна</h2>
+        <p>Необхідно розробити форму для додавання товару до веб-системи.
+            Провести валідацію розробленої сторінки за
+            допомогою валідатора <a href="https://validator.w3.org/"
+                target="_blank">за посиланням</a>.</p>
+        <ul>
+            <li>
+                дані про товар, включають назву товару, тип товари(вибирається
+                зі списку), дату виробництва, ціну, кількість на складі (ціле
+                число
+                від 1 до 100000);
+            </li>
+            <li>
+                дані про виробника, включають назву, юридичну адресу, електрону
+                пошту, посилання на веб-сайт, коментарі.
+            </li>
+        </ul>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Дані про товар</legend>
+                <label>
+                    Назва товару
+                    <input type="text" id="items" required
+                        placeholder="Введіть назву товару">
+                </label>
+                <label>
+                    Тип товару
+                    <select id="itemType" required>
+                        <option>Косметика</option>
+                        <option>Одяг</option>
+                        <option>Побутові товари</option>
+                        <option>Товари для дому</option>
+                        <option>Дитячі товари</option>
+                    </select>
+                </label>
+                <label>
+                    Дата виробництва
+                    <input type="date" id="itemProductionDate" required>
+                </label>
+                <label>
+                    Ціна
+                    <input type="number" id="itemPrice" required
+                        placeholder="Введіть ціну товару">
+                </label>
+                <label>
+                    Кількість
+                    <input type="number" id="itemsQuantity" required
+                        placeholder="Введіть кількість товару" min="1"
+                        max="100000" style="width: 170px">
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Дані про виробника</legend>
+                <label>
+                    Назва
+                    <input type="text" id="vendorName" required
+                        placeholder="Введіть назву виробника">
+                </label>
+                <label>
+                    Юридична адреса
+                    <input type="text" id="vendorAdress"
+                        placeholder="Введіть юридичну адресу виробника"
+                        style="width: 250px" required>
+                </label>
+                <label>
+                    Електрона пошта
+                    <input type="text" id="vendorEmail"
+                        placeholder="Введіть електронну пошту виробника"
+                        style="width: 250px" required>
+                </label>
+                <label>
+                    Веб-сайт
+                    <input type="text" id="vendorWeb-site"
+                        placeholder="Введіть посилання на веб-сайт виробника"
+                        style="width: 270px" required>
+                </label>
+                <label>
+                    Коментар
+                    <textarea id="comment" cols="50" rows="5"></textarea>
+                </label>
+            </fieldset>
+            <button type="submit">Відправити</button>
+        </form>
+    </body>
+
+</html>
